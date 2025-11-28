@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>GF Propose</title>
+    
+
+  </head>
+    
+  <body>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Confession</title>
+    <style>
+        body {
+            background-color: #FFE6E6;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 90%;
+            width: 350px;
+        }
+        .gif-image {
+            width: 100%;
+            max-width: 200px;
+            border-radius: 15px;
+        }
+        h1 {
+            color: #FF69B4;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .btn {
+            padding: 10px 20px;
+            margin: 0 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        .btn-yes {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .btn-no {
+            background-color: #f44336;
+            color: white;
+            position: relative;
+        }
+        .btn:hover {
+            opacity: 0.8;
+        }
+        #initialQuestion, #loveResponse, #pleaseThinkAgain, #finalPlea, #lastChance {
+            display: none;
+        }
+        #initialQuestion {
+            display: block;
+        }
+        .emoji {
+            width: 25px;
+            height: 25px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="initialQuestion">
+            <img class="gif-image" src="https://media.giphy.com/media/yc2pHdAoxVOrJ2m5Ha/giphy.gif" alt="Love GIF">
+            <h1>Do You love me? <img class="emoji" src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Smiling%20Face%20with%20Hearts.png" alt="Smiling Face with Hearts"></h1>
+            <p>Vinkal is all yours <img class="emoji" src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Hugging%20Face.png" alt="Hugging Face"></p>
+            <button class="btn btn-yes" onclick="loveResponse(true)">Yes</button>
+            <button class="btn btn-no" onclick="loveResponse(false)">No</button>
+        </div>
+        <div id="loveResponse">
+            <img class="gif-image" src="https://media.giphy.com/media/MarodU6Pw8pRmvxyyR/giphy.gif" alt="Love Response GIF">
+            <h1>I love you Babu <img class="emoji" src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Smiling%20Face%20with%20Heart-Eyes.png" alt="Smiling Face with Heart-Eyes"></h1>
+        </div>
+        <div id="pleaseThinkAgain">
+            <img class="gif-image" src="https://media.giphy.com/media/jLKvwWHIXUS4/giphy.gif" alt="Please Think Again GIF">
+            <h1>Please think again !<img class="emoji" src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Face%20with%20Rolling%20Eyes.png" alt="Face with Rolling Eyes"></h1>
+            <p>Itni jaldi nahi matt bolo please <img class="emoji" src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Downcast%20Face%20with%20Sweat.png" alt="Downcast Face with Sweat"></p>
+            <button class="btn btn-yes" onclick="loveResponse(true)">Yes</button>
+            <button class="btn btn-no" onclick="finalPlea()">No</button>
+        </div>
+        <div id="finalPlea">
+            <img class="gif-image" src="https://media.giphy.com/media/7SF5scGB2AFrgsXP63/giphy.gif" alt="Final Plea GIF">
+            <h1>Babu maan jao na please <img class="emoji" src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Persevering%20Face.png" alt="Persevering Face"></h1>
+            <p>Kitna bhav khaogi <img class="emoji" src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Unamused%20Face.png" alt="Unamused Face"></p>
+            <button class="btn btn-yes" onclick="loveResponse(true)">Yes</button>
+            <button class="btn btn-no" onclick="lastChance()" id="movingNoButton">No</button>
+        </div>
+        <div id="lastChance">
+            <img class="gif-image" src="https://media.giphy.com/media/dJYoOVAWf2QkU/giphy.gif" alt="Last Chance GIF">
+            <h1>Ek baar aur soch lo babu <img class="emoji" src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Persevering%20Face.png" alt="Persevering Face"></h1>
+            <p>Please ........... <img class="emoji" src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Loudly%20Crying%20Face.png" alt="Loudly Crying Face"></p>
+            <button class="btn btn-yes" onclick="loveResponse(true)">Yes</button>
+            <button class="btn btn-no" onmouseover="moveButton(event)" ontouchstart="moveButtonMobile(event)" id="finalNoButton">No</button>
+        </div>
+    </div>
+
+    <audio id="pleaseSound" src="https://www.soundjay.com/human/sounds/woman-please-1.mp3"></audio>
+    <audio id="thankYouSound" src="https://www.soundjay.com/human/sounds/thank-you-1.mp3"></audio>
+
+    <script>
+        function loveResponse(answer) {
+            hideAll();
+            if (answer) {
+                document.getElementById('loveResponse').style.display = 'block';
+                document.getElementById('thankYouSound').play();
+            } else {
+                document.getElementById('pleaseThinkAgain').style.display = 'block';
+            }
+        }
+
+        function finalPlea() {
+            hideAll();
+            document.getElementById('finalPlea').style.display = 'block';
+        }
+
+        function lastChance() {
+            hideAll();
+            document.getElementById('lastChance').style.display = 'block';
+        }
+
+        function hideAll() {
+            document.getElementById('initialQuestion').style.display = 'none';
+            document.getElementById('loveResponse').style.display = 'none';
+            document.getElementById('pleaseThinkAgain').style.display = 'none';
+            document.getElementById('finalPlea').style.display = 'none';
+            document.getElementById('lastChance').style.display = 'none';
+        }
+
+        function moveButton(event) {
+            var button = document.getElementById('finalNoButton');
+            var container = document.querySelector('.container');
+            var rect = container.getBoundingClientRect();
+            var buttonRect = button.getBoundingClientRect();
+
+            var maxX = rect.width - buttonRect.width;
+            var maxY = rect.height - buttonRect.height;
+
+            var newX = Math.random() * maxX;
+            var newY = Math.random() * maxY;
+
+            button.style.position = 'absolute';
+            button.style.left = newX + 'px';
+            button.style.top = newY + 'px';
+            button.style.transition = 'all 0.3s ease';
+
+            document.getElementById('pleaseSound').play();
+        }
+
+        function moveButtonMobile(event) {
+            event.preventDefault();
+            moveButton(event);
+        }
+    </script>
+</body>
+</html>
+    
+  </body>
+  
+</html>
